@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <title>Clock Alarm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body> 
+    <div  class="main-container">
+    <section class="container">
+
+        <div class="time-display" style="margin:auto;background-color: rgb(95, 102, 102);">
+            <div style="margin:20px;margin-left:5px"><i class="fa-solid fa-clock"></i></div>
+            
+            <div id="clock" style="font-weight: bold;"></div>
+        </div>
+        <form class="setAlarm">
+        <label class="alarm-heading"><h2>Set Alarm (24-Hours Clock)</h2><label><br>
+            <!-- ye alarm set karne ka div hai -->
+        <div class="set-alarm-field">
+            <input type="number" name="a_hour" id="a_hour" placeholder="Hrs" max="23" min="00">
+            <input type="number" name="a_min" id="a_min" placeholder="Min" max="59" min="00">
+            <input type="number" name="a_sec" id="a_sec" placeholder="Sec" max="59" min="00">
+        </div>
+        <!-- end of alarm setting -->
+             <!--  alarm ko control karne ka button jaise set alarm and stop alarm suru   -->
+            <div class="controls">
+                <button type="submit" class="set-alarm">set alarm</button>
+                <button type="reset" onclick="clearAlarm()" class="clear-alarm">stop alarm</button>
+            </div>
+        </form> 
+    </section>
+
+    <hr style="margin-top:15px">
+<!-- this is section 2 where we will add the list of upcoming alarm through js -->
+    <section>
+        <div>
+            <h3 class="alarm-heading" style="margin-top: 5px;">Alarms</h3>
+        </div>
+        <div>
+            <ul id = "myList" style="margin:auto;">
+                
+            </ul>
+        </div>
+    </section>
+</div>
+    <script src="clock.js"></script>
+</body>
+</html>
